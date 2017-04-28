@@ -1,0 +1,55 @@
+body{
+	background: #026;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	color: #09F;
+}
+.header{
+	position: absolute;
+	top: 0;
+	height: 40pt;
+	background: #17C;
+	width: 100%;
+	font-size: 24pt;
+	font-family: 'Indie Flower', cursive;
+	white-space: nowrap
+}
+.option{
+	top: 0;
+	width: 24.5%;
+	height: 40pt;
+	background: #28D;
+	text-align: center;
+	color: #FFFFFF;
+	vertical-align: middle;
+	display: inline-block
+}
+.option:hover{
+	background: #39F;
+}
+.title{
+	text-align: center;
+	font-family: 'Indie Flower', cursive;
+	font-size: 34pt;
+}
+.subtitle{
+	text-align: center;
+	font-family: 'Indie Flower', cursive;
+	font-size: 16pt;
+}
+.content{
+	color: #9CF;
+	background: #137;
+	width: 100%;
+	height: 100%;
+	text-align: left;
+	font-family: 'Indie Flower', cursive;
+	font-size: 20pt;
+}
+.emoji{
+	width: 32px;
+}
