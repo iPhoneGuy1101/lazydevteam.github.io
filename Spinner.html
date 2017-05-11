@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<Link rel="apple-touch-icon" href="http://www.asseenontvandbeyond.com/assets/images/fidget-spinner-yellow.png"></link>
+<title>Fidget Spinner App</title>
+</head>
+<body>
+<center><img class="spinner" id="a" style="align:center" src="http://www.asseenontvandbeyond.com/assets/images/fidget-spinner-yellow.png"></img><br/>Time left: <a id="tl">estimating...</a></center>
+<script>
+var maxVel=365*2, decVel=0.1, incVel=8;
+var size = 512;
+var spinners = [], rotation = [], velocity = [];
+window.onerror = function(a,b,c,d){alert(a+"\n"+b+"\n"+c+"\n"+d+"\n")};
+window.onload=function(){
+spinners = document.getElementsByClassName("spinner");
+//alert(spinners.length);
+for(var i = 0; i<spinners.length; i++) {
+var s = spinners[i];
+s.style.display="block";
+s.style.width = size+"px";
+s.style.height = size+"px";
+s.addEventListener("touchmove",click);
+s.addEventListener("click",stop);
+rotation.push(0);
+velocity.push(3);
+}
+draw();
+}
+function draw(){
+for(var i = 0; i<spinners.length; i++){
+var s = spinners[i];
+if(s instanceof Object){
+rotation[i]+=velocity[i];
+var secsLeft=Math.round(velocity[i]/decVel/60);
+var minsLeft=parseInt(secsLeft/60);
+document.getElementById('tl').innerHTML=minsLeft+":"+(secsLeft%60);
+if(velocity[i]>decVel)velocity[i]-=decVel
+velocity[i] = velocity[i]<maxVel?velocity[i]:maxVel-0.001;
+s.style.transform="rotate("+(rotation[i]%359)+"deg)";
+}
+}
+setTimeout(draw, 1000/45);
+}
+function click(e){
+e.preventDefault();
+for(var i=0; i<velocity.length; i++){
+velocity[i]+=incVel/16;
+}
+}
+function stop(e){
+e.preventDefault();
+for(var i=0; i<velocity.length; i++){
+velocity[i]=0;
+}
+}
+</script>
+</body>
+</html>
