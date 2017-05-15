@@ -1,5 +1,5 @@
 # Home
-<a href="/homepage.htm">Click here</a>
+<a href="https://lazydevteam.github.io/">Click here</a>
 <script>
   location = "/homepage.htm";
 </script>
