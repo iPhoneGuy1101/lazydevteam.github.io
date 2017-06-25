@@ -1,6 +1,6 @@
 var html = document.getElementsByTagName("html")[0];
 html.innerHTML = html.innerHTML.replace(/placeholder_home/g, "<link rel='favicon' href='favicon.png' />Home");
-html.innerHTML = html.innerHTML.replace(/placeholder_devteam/g, "<link rel='apple-mobile-touch-icon' href='favicon2.png' />Developers");
+html.innerHTML = html.innerHTML.replace(/placeholder_devteam/g, "Developers");
 html.innerHTML = html.innerHTML.replace(/placeholder_projects/g, "<link rel='shortcut icon' href='favicon2.png' />Projects");
 html.innerHTML = html.innerHTML.replace(/placeholder_downloads/g, "<link rel='icon' href='favicon2.png' />Applications");
 html.innerHTML = html.innerHTML.replace(/placeholder_lg/g, "Lazy Guy Jimmy");
